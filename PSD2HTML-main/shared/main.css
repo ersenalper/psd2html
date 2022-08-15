@@ -1,0 +1,1028 @@
+/* CSS FILE */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    object-fit: contain;
+}
+
+:root {
+    --primary: #093e52;
+    --secondary: #daa900;
+    --fontfamilyH: 'Minion Pro Regular';
+    --borders: 1px solid #e2e2e2;
+}
+
+button {
+    background-color: transparent;
+    border: 0;
+}
+
+@font-face {
+    font-family: 'Minion Pro Regular';
+    font-style: normal;
+    font-weight: lighter;
+    src: local('Minion Pro Regular'), url('font/MinionPro-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Montserrat'), url('font/Montserrat-Medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'MontserratAlternes';
+    font-style: normal;
+    font-weight: normal;
+    src: local('MontserratAlternes'), url('font/MontserratAlternates-Medium.woff') format('woff');
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.webContainer {
+    width: 1140px;
+}
+
+.web1200 {
+    width: 1200px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: -20px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/*HEADER*/
+
+.Jacksonwille_BG {
+    background-image: url("./img/Jacksonwille_BG.png");
+    width: 100%;
+    height: 266px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    background-image: url(./img/logo.png);
+    background-repeat: no-repeat;
+    width: 170px;
+    height: 170px;
+}
+
+.Jacksonwille_BG .headerLogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.Jacksonwille_BG .headertext {
+    text-transform: uppercase;
+    font-family: var(--fontfamilyH);
+}
+
+.Jacksonwille_BG .headertext h2 {
+    color: var(--primary);
+    font-size: 100px;
+    font-weight: lighter;
+    margin-bottom: -34px;
+}
+
+.Jacksonwille_BG .headertext h3 {
+    color: var(--secondary);
+    font-size: 52px;
+    font-weight: lighter;
+    letter-spacing: 9px;
+    margin-left: 20px;
+}
+
+.Jacksonville_TopHeader {
+    border-bottom: var(--borders);
+}
+
+.Jacksonville_TopHeader .toolbar {
+    margin: 0 auto;
+    font-family: "Montserrat";
+    color: #000;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 1.2;
+    font-weight: normal;
+}
+
+.Jacksonville_TopHeader .toolbar ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.Jacksonville_TopHeader .toolbar li {
+    display: inline-block;
+    border-left: var(--borders);
+    padding: 10px 20px;
+}
+
+.Jacksonville_TopHeader .toolbar li:last-child {
+    border-left: var(--borders);
+    border-right: var(--borders);
+}
+
+.Jacksonville_TopHeader .toolbar li a {
+    display: flex;
+    align-items: center;
+}
+
+.Jacksonville_TopHeader .toolbar li .fa-facebook-f {
+    color: #093e52;
+    font-size: 18px;
+}
+
+.fa-caret-down {
+    color: var(--primary);
+}
+
+.loginicon,
+.searchicon,
+.translateicon {
+    width: 18px;
+    height: 18px;
+}
+
+.loginicon {
+    background: url(./img/icon/login.png) no-repeat;
+}
+
+.searchicon {
+    background: url(./img/icon/search.png)no-repeat;
+}
+
+.translateicon {
+    background: url(./img/icon/translator.png)no-repeat;
+}
+
+.Jacksonville_Nav {
+    background-color: var(--primary);
+    font-family: "MontserratAlternes";
+    color: white;
+}
+
+.Jacksonville_Nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Jacksonville_Nav .navbar {
+    margin: 0 auto;
+}
+
+.Jacksonville_Nav ul li {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    padding: 15px 35px;
+    font-size: 20px;
+}
+
+.Jacksonville_Nav ul li:first-child {
+    padding-left: 0px;
+}
+
+.Jacksonville_Nav ul li:last-child {
+    padding-right: 0px;
+}
+
+.Jacksonville_Nav ul li:after {
+    content: "\A";
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background-color: var(--secondary);
+    display: inline-block;
+    margin-left: 35px;
+}
+
+.Jacksonville_Nav ul li:last-child::after {
+    width: 0;
+}
+
+.Jacksonville_Nav ul li .nav-link {
+    text-align: center;
+}
+
+.Jacksonville_Nav ul li .nav-link::after {
+    content: "";
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    bottom: 0;
+    width: 70%;
+    height: 3px;
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+    transform-origin: bottom right;
+    background-color: var(--secondary);
+}
+
+.Jacksonville_Nav ul li:last-child .nav-link::after {
+    margin-right: 0;
+    right: 0;
+}
+
+.Jacksonville_Nav ul li:first-child .nav-link::after {
+    margin-left: 0;
+    left: 0;
+}
+
+.Jacksonville_Nav ul li .nav-link:hover::after {
+    transform-origin: bottom left;
+    transform: scaleX(1);
+}
+
+.Jacksonville_Slider {
+    border-bottom: 3px solid var(--secondary);
+    height: 100%;
+}
+
+.Jacksonville_Slider .slider {
+    background: url(./img/slider.png) no-repeat center;
+    background-size: cover;
+    height: 797px;
+}
+
+.Jacksonville_Section {
+    margin: 0 auto;
+    margin-top: -90px;
+    position: relative;
+}
+
+.Jacksonville_Section .section_1 {
+    background-color: white;
+    height: 200px;
+    border-top: 3px solid var(--secondary);
+    padding: 30px;
+}
+
+.bloglist {
+    display: flex;
+    justify-content: space-between;
+}
+
+.blogitem {
+    background: url(./img/leaves.png) no-repeat var(--primary) right;
+    display: flex;
+    justify-content: space-between;
+}
+
+.blogpic1,
+.blogpic2,
+.blogpic3 {
+    width: 190px;
+    height: 119px;
+}
+
+.blogpic1 {
+    background: url(./img/blogpic1.png) no-repeat;
+}
+
+.blogpic2 {
+    background: url(./img/blogpic2.png) no-repeat;
+}
+
+.blogpic3 {
+    background: url(./img/blogpic3.png) no-repeat;
+}
+
+.blogitem_text {
+    font-family: "MontserratAlternes";
+    font-size: 19px;
+    color: white;
+    margin: auto;
+}
+
+.column {
+    float: left;
+    width: 30%;
+    /* Should be removed. Only for demonstration */
+}
+
+.section_2 ul.sectionListUl {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section_2 ul li.rightList,
+.section_2 ul li.leftList {
+    display: inline-block;
+    width: 50%;
+}
+
+.sectionListHeader {
+    font-size: 36px;
+    margin-bottom: 35px;
+    color: var(--primary);
+    font-family: "MontserratAlternes";
+}
+
+.leftList {
+    padding-left: 40px;
+}
+
+.leftList .sectionListHeader {
+    margin-left: 40px;
+}
+
+.eventList {
+    flex-direction: column;
+}
+
+.eventList li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.dateBG {
+    background: url(./img/dateBG.png) no-repeat;
+    width: 65px;
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.dateBG span {
+    margin: auto;
+    text-transform: uppercase;
+    color: var(--primary);
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.eventText {
+    font-family: "MontserratAlternes";
+    font-size: 19px;
+    font-weight: bold;
+    color: var(--primary);
+    margin-left: 25px;
+    max-width: 71%;
+}
+
+.eventDate {
+    font-size: 15px;
+    color: #000;
+    margin-top: 5px;
+    font-weight: normal;
+}
+
+.listShow li {
+    display: inline-block;
+    font-family: "MontserratAlternes";
+    color: var(--primary);
+    font-weight: bold;
+    margin-right: 20px;
+    margin-top: 15px;
+}
+
+.listShow li a i {
+    color: var(--secondary);
+}
+
+.newsList li {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2.7px dotted var(--primary);
+    padding: 25px 0;
+}
+
+.newsList li:first-child {
+    padding-top: 0;
+}
+
+.newsBody {
+    max-width: 60%;
+    margin: 10px 0 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.newsimg1,
+.newsimg2 {
+    width: 196px;
+    height: 141px;
+}
+
+.newsimg1 {
+    background-image: url(./img/newspic1.png);
+}
+
+.newsimg2 {
+    background-image: url(./img/newspic2.png);
+}
+
+.newsHeader {
+    color: var(--primary);
+    font-size: 19px;
+    font-family: "MontserratAlternes";
+    font-weight: bold;
+}
+
+.newsText {
+    font-size: 16px;
+    color: #000;
+    margin-top: 5px;
+    font-weight: normal;
+    font-family: "MontserratAlternes";
+    line-height: 1.8;
+}
+
+.newsList .notImg .newsBody {
+    max-width: 100%;
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.section_3 {
+    height: 100%;
+    position: relative;
+    margin-top: 100px;
+}
+
+.section_3 .parallax {
+    height: 640px;
+    background: url(./img/parallax.png) no-repeat center;
+    background-size: cover;
+}
+
+.section_3 .shade {
+    height: 306px;
+    background: url(./img/shade.png) no-repeat center;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
+
+.section_3 .parallaxHeader {
+    position: absolute;
+    top: 50px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+.section_3 .parallaxHeader h4 {
+    color: var(--secondary);
+    font-family: "Minion Pro Regular";
+    text-transform: uppercase;
+    letter-spacing: 9px;
+    font-weight: lighter;
+    font-size: 16px;
+}
+
+.section_3 .parallaxHeader h2 {
+    color: white;
+    font-family: "Minion Pro Regular";
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 70px;
+}
+
+.section_4 {
+    margin: 0 auto;
+    margin-top: 52px;
+}
+
+.section_4 h3 {
+    font-size: 36px;
+    font-family: "MontserratAlternes";
+    color: var(--primary);
+    width: 720px;
+    margin: 0 auto;
+}
+
+.section_4 .albumpic1,
+.section_4 .albumpic2 {
+    width: 340px;
+    height: 261px;
+}
+
+.section_4 .albumpic1 {
+    background: url(./img/albumpic1.png) no-repeat center;
+}
+
+.section_4 .albumpic2 {
+    background: url(./img/albumpic1.png) no-repeat center;
+}
+
+.section_4 .card-body {
+    text-align: center;
+    border: var(--borders);
+}
+
+.section_4 .card-body h4 {
+    font-size: 19px;
+    color: var(--primary);
+    font-family: "MontserratAlternes";
+    padding: 10px 0;
+}
+
+.cardlist {
+    display: flex;
+    justify-content: center;
+}
+
+.carditem {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 20px;
+}
+
+.section_5 {
+    background-color: var(--primary);
+    position: relative;
+    margin: 0 auto;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    font-family: "MontserratAlternes";
+    margin-top: 52px;
+}
+
+.section_5 .videoText {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 50px 30px;
+}
+
+.videoText .listShow li {
+    color: white;
+}
+
+.section_5 .videoText h2 {
+    font-size: 36px;
+}
+
+.section_5 .videoText h5 {
+    font-size: 19px;
+    font-weight: lighter;
+}
+
+.section_5 .videoSect {
+    background: url(./img/video.png);
+    width: 720px;
+    height: 407px;
+}
+
+
+/*FOOTER*/
+
+.bgPrimary {
+    background-color: var(--primary);
+    height: 116px;
+    position: relative;
+}
+
+#footer {
+    position: relative;
+    margin-top: 65px;
+}
+
+.footerBG {
+    background: url(./img/Cityscape.png) no-repeat center;
+    background-size: cover;
+    float: right;
+    width: 540px;
+    height: 77px;
+    position: absolute;
+    top: -77px;
+    right: 0;
+}
+
+.footerMain {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+.footerText {
+    margin-left: 20px;
+}
+
+.footerMain h3 {
+    font-size: 30px;
+    color: white;
+    text-transform: uppercase;
+    font-family: "Minion Pro Regular";
+    font-weight: lighter;
+}
+
+.footerMain h4 {
+    font-size: 24px;
+    color: white;
+    text-transform: uppercase;
+    font-family: "Minion Pro Regular";
+    font-weight: lighter;
+}
+
+.footerCol1 {
+    display: flex;
+    align-items: center;
+}
+
+.footerCol2 {
+    display: flex;
+    align-items: center;
+}
+
+.footerInfo {
+    border-left: 2px solid var(--secondary);
+    padding: 0 30px;
+    font-size: 16px;
+    font-family: "Montserrat";
+    color: white;
+}
+
+.footerDesc {
+    margin: 35px auto;
+    font-family: "Montserrat";
+    font-size: 12px;
+    text-align: center;
+}
+
+.footerPoweredBy {
+    background-color: #ededed;
+    font-size: 10px;
+    text-align: center;
+    padding: 10px;
+    font-family: "Montserrat";
+}
+
+.footerPoweredBy .webContainer {
+    margin: 0 auto;
+}
+
+.Jacksonville_Nav ul:first-child li {
+    display: none;
+}
+
+@media only screen and (max-width: 1199px) {
+    .webContainer,
+    .section_1,
+    .web1200 {
+        width: auto;
+    }
+    .Jacksonville_Nav .navbar {
+        padding: 10px 20px;
+    }
+    .Jacksonville_Nav ul li {
+        font-size: 17px;
+    }
+    .Jacksonville_Nav ul:first-child li {
+        display: none;
+    }
+    .logo {
+        width: 150px;
+        height: 150px;
+        background-size: cover;
+    }
+    .sectionListHeader {
+        font-size: 30px;
+    }
+    .rightList {
+        padding-right: 40px;
+    }
+    .section_4 {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .section_4 h3 {
+        width: 620px;
+    }
+    .section_4 .albumpic1,
+    .section_4 .albumpic2 {
+        width: 290px;
+        height: 211px;
+    }
+    .column {
+        width: 50%;
+    }
+    .footerMain {
+        padding: 0 20px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .webContainer,
+    .section_1,
+    .web1200 {
+        width: auto;
+    }
+    .Jacksonville_Nav ul li:last-child {
+        padding-right: 35px;
+    }
+    .Jacksonwille_BG .headertext h2 {
+        font-size: 75px;
+    }
+    .Jacksonwille_BG .headertext h3 {
+        font-size: 27px;
+        margin-top: 10px;
+    }
+    .Jacksonville_Nav {
+        border-bottom: 2px solid var(--secondary);
+    }
+    .Jacksonville_Nav .navbar {
+        padding: 8px 30px;
+    }
+    .Jacksonville_Nav ul:first-child {
+        justify-content: end;
+    }
+    .Jacksonville_Nav ul:first-child li {
+        display: block;
+        text-align: end;
+    }
+    .Jacksonville_Nav ul:last-child {
+        display: none;
+        flex-direction: column;
+        left: 0;
+        position: absolute;
+        background-color: var(--primary);
+        width: 100%;
+        border-top: 2px solid var(--secondary);
+    }
+    .Jacksonville_Nav ul li {
+        text-align: center;
+        display: block;
+    }
+    .Jacksonville_Nav ul li:first-child {
+        padding-left: 35px;
+    }
+    .Jacksonville_Nav ul li:last-child {
+        padding-right: 35px;
+    }
+    .Jacksonville_Nav ul li:after {
+        display: none;
+    }
+    .newsHeader {
+        font-size: 17px;
+    }
+    .eventText {
+        font-size: 17px;
+    }
+    .eventDate {
+        font-size: 15px;
+    }
+    .newsimg1,
+    .newsimg2 {
+        width: 150px;
+    }
+    .newsText {
+        font-size: 14px;
+    }
+    .section_4 .albumpic1,
+    .section_4 .albumpic2 {
+        width: 250px;
+        height: 171px;
+    }
+    .section_4 h3 {
+        width: 540px;
+        font-size: 30px;
+    }
+    .blogpic1,
+    .blogpic2,
+    .blogpic3 {
+        width: 120px;
+        height: 100px;
+    }
+    .blogitem_text {
+        font-size: 16px;
+    }
+    .footerMain h3 {
+        font-size: 25px;
+    }
+    .footerMain h4 {
+        font-size: 19px;
+    }
+    .footerInfo {
+        font-size: 12px;
+    }
+    .footerDesc {
+        padding: 0 20px;
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .webContainer,
+    .section_1,
+    .web1200 {
+        width: auto;
+    }
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
+    .Jacksonville_Slider .slider {
+        height: 520px;
+    }
+    .logo {
+        width: 100px;
+        height: 100px;
+        background-size: contain;
+    }
+    .Jacksonville_Nav ul li:last-child {
+        padding-right: 0;
+    }
+    .section_4 .albumpic1,
+    .section_4 .albumpic2 {
+        width: 290px;
+        height: 211px;
+    }
+    .section_4 h3 {
+        width: 620px;
+    }
+    .section_2 ul.sectionListUl {
+        flex-direction: column;
+    }
+    .section_2 ul li.rightList,
+    .section_2 ul li.leftList {
+        width: 100%;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .leftList .sectionListHeader {
+        margin-left: 0;
+    }
+    .section_2 ul li.leftList {
+        padding-bottom: 50px;
+        margin-bottom: 20px;
+        border-bottom: 2px solid var(--secondary);
+    }
+    .section_3 {
+        margin-top: 70px;
+    }
+    #footer {
+        margin-top: 90px;
+    }
+    .footerMain h3 {
+        font-size: 18px;
+    }
+    .footerMain h4 {
+        font-size: 13px;
+    }
+    .footerInfo {
+        font-size: 10px;
+        padding: 0 15px;
+    }
+    .footerDesc {
+        padding: 0 20px;
+        font-size: 10px;
+    }
+    .topText {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 664px) {
+    .column {
+        width: 100%;
+    }
+    .Jacksonwille_BG .headertext h2 {
+        font-size: 50px;
+    }
+    .Jacksonwille_BG .headertext h3 {
+        font-size: 17px;
+        margin-top: 20px;
+        margin-left: 16px;
+    }
+    .bgPrimary {
+        height: 200px;
+    }
+    .section_4 h3 {
+        text-align: center;
+        width: auto;
+    }
+    .Jacksonville_Section .section_1 {
+        height: auto;
+    }
+    .section_3 .parallaxHeader h2 {
+        font-size: 50px;
+    }
+    .blogpic1,
+    .blogpic2,
+    .blogpic3 {
+        width: 160px;
+    }
+    .bloglist {
+        flex-direction: column;
+    }
+    .blogitem:first-child {
+        border-top: 2px solid var(--secondary);
+    }
+    .blogitem {
+        border-bottom: 2px solid var(--secondary);
+    }
+    .carditem {
+        justify-content: center;
+    }
+    .cardlist {
+        flex-direction: column;
+        align-items: center;
+    }
+    .section_5 {
+        flex-direction: column;
+    }
+    .section_5 .listShow li,
+    .section_5 .videoText h5 {
+        margin-top: 10px;
+    }
+    .section_5 .videoSect {
+        width: auto;
+    }
+    .footerMain {
+        flex-direction: column;
+    }
+    .footerDesc {
+        margin: 20px auto;
+    }
+}
+
+@media only screen and (max-width: 446px) {
+    .Jacksonville_Slider .slider {
+        height: 420px;
+    }
+    .Jacksonwille_BG .headertext h2 {
+        font-size: 38px;
+    }
+    .Jacksonwille_BG .headertext h3 {
+        font-size: 10px;
+        margin-top: 25px;
+    }
+    .dateBG span {
+        font-size: 14px;
+    }
+    .dateBG {
+        width: 60px;
+        height: 50px;
+        background-size: cover;
+    }
+    .section_3 .parallaxHeader h2 {
+        font-size: 35px;
+    }
+    .section_3 .parallaxHeader h4 {
+        font-size: 12px;
+    }
+    .section_3 .parallaxHeader {
+        top: 100px;
+    }
+}
